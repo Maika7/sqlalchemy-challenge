@@ -124,35 +124,3 @@ def temperature_stats(start, end=None):
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
-
- #Route: 
- @app.route('/')
-#Description: This is the root route, which serves as the homepage of the Flask API. It provides a list of all available routes in the application.
-#How to Access: Visit http://127.0.0.1:5000/ in a browser. This will display a welcome message along with the list of all the available routes for the API.
-
-#Route: 
-@app.route('/api/v1.0/precipitation')
-#Description: This route returns the precipitation data for the last 12 months. It calculates the date one year ago from the most recent date in the dataset and retrieves all precipitation data from that date onward.
-#How to Access: Visit http://127.0.0.1:5000/api/v1.0/precipitation in a browser. The response will be a JSON object containing the date as the key and precipitation as the value for each entry.
-
-#Route: 
-@app.route('/api/v1.0/stations')
-#Description: This route returns a JSON list of all the weather stations in the database.
-#How to Access: Visit http://127.0.0.1:5000/api/v1.0/stations in a browser. The response will be a JSON list containing the station IDs of all stations.
-
-
-#Route: @app.route('/api/v1.0/tobs')
-#Description: This route returns a JSON list of temperature observations (TOBS) for the most active station for the previous year.
-#How to Access: Visit http://127.0.0.1:5000/api/v1.0/tobs in a browser. The response will be a JSON list of temperature observations for the most active weather station.
-
-#Routes:
-@app.route('/api/v1.0/<start>')
-@app.route('/api/v1.0/<start>/<end>')
-#Description: These routes return a JSON list containing the minimum, average, and maximum temperatures for a specified start date or for a date range from start to end.
-#How to Access:
-#Visit http://127.0.0.1:5000/api/v1.0/2017-01-01 to get the temperature statistics from January 1, 2017, to the end of the dataset.
-#Visit http://127.0.0.1:5000/api/v1.0/2017-01-01/2017-12-31 to get the temperature statistics from January 1, 2017, to December 31, 2017.

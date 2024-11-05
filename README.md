@@ -50,6 +50,7 @@ API Endpoints
 /api/v1.0/tobs: Returns temperature observations for the most active station for the last year.
 /api/v1.0/<start>: Returns the minimum, average, and maximum temperatures from the specified start date to the most recent date.
 /api/v1.0/<start>/<end>: Returns temperature statistics for a given date range.
+
 Example Output
 Precipitation Route Example: /api/v1.0/precipitation
 
